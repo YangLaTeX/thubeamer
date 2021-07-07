@@ -1,0 +1,722 @@
+% \iffalse meta-comment
+% !TeX program  = XeLaTeX
+% !TeX encoding = UTF-8
+%
+% Copyright (C) 2019--2021 by Jingxuan Yang <yanglatex2e@gmail.com>
+%
+% This file may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3c
+% of this license or (at your option) any later version.
+% The latest version of this license is in:
+%
+% http://www.latex-project.org/lppl.txt
+%
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008/05/04 or later.
+
+%<*internal>
+\def\nameofplainTeX{plain}
+\ifx\fmtname\nameofplainTeX\else
+  \expandafter\begingroup
+\fi
+%</internal>
+%<*install>
+
+\input docstrip
+\keepsilent
+\askforoverwritefalse
+\preamble
+
+This is a generated file.
+
+Copyright (C) 2019--\the\year by Jingxuan Yang <yanglatex2e@gmail.com>
+
+This file may be distributed and/or modified under the
+conditions of the LaTeX Project Public License, either version 1.3c
+of this license or (at your option) any later version.
+The latest version of this license is in:
+
+http://www.latex-project.org/lppl.txt
+
+and version 1.3c or later is part of all distributions of LaTeX
+version 2008/05/04 or later.
+
+To produce the documentation run the original source files ending with `.dtx'
+through LaTeX.
+
+\endpreamble
+\postamble
+
+This package consists of the file  thubeamer.dtx,
+             and the derived files thubeamer.pdf,
+                                   beamerthemethubeamer.sty,
+                                   beamercolorthemethubeamer.sty,
+                                   beamerinnerthemethubeamer.sty,
+                                   beamerouterthemethubeamer.sty.
+
+\endpostamble
+
+\usedir{tex/latex/thubeamer}
+\generate
+  {
+    \file{dtx-style.sty}{\from{\jobname.dtx}{dtx-style}}
+  \file{beamerthemethubeamer.sty}{\from{\jobname.dtx}{thubeamer}}
+	\file{beamercolorthemethubeamer.sty}{\from{\jobname.dtx}{thucolorstyle}}
+	\file{beamerinnerthemethubeamer.sty}{\from{\jobname.dtx}{thuinnerstyle}}
+	\file{beamerouterthemethubeamer.sty}{\from{\jobname.dtx}{thuouterstyle}}
+  }
+
+\Msg{***********************************************************}
+\Msg{*}
+\Msg{* To finish the installation you have to move the following}
+\Msg{* files into a directory searched by TeX:}
+\Msg{*}
+\Msg{* The recommended directory is TEXMF/tex/latex/thubeamer}
+\Msg{*}
+\Msg{* \space\space dtx-style.sty}
+\Msg{* \space\space beamerthemethubeamer.sty}
+\Msg{* \space\space beamercolorthemethubeamer.sty}
+\Msg{* \space\space beamerinnerthemethubeamer.sty}
+\Msg{* \space\space beamerouterthemethubeamer.sty}
+\Msg{*}
+\Msg{* To produce the documentation run the files ending with}
+\Msg{* `.dtx' through LaTeX.}
+\Msg{*}
+\Msg{* Happy TeXing!}
+\Msg{***********************************************************}
+
+%</install>
+%<install>\endbatchfile
+%<*internal>
+
+\usedir{tex/latex/thubeamer}
+\generate
+  {
+	\file{\jobname.ins}{\from{\jobname.dtx}{install}}
+  }
+\nopreamble\nopostamble
+
+\ifx\fmtname\nameofplainTeX
+  \expandafter\endbatchfile
+\else
+  \expandafter\endgroup
+\fi
+%</internal>
+%
+%<thubeamer|thucolorstyle|thuinnerstyle|thuouterstyle>\NeedsTeXFormat{LaTeX2e}
+%<thubeamer>\ProvidesPackage{beamerthemethubeamer}
+%<thucolorstyle>\ProvidesPackage{beamercolorthemethubeamer}
+%<thuinnerstyle>\ProvidesPackage{beamerinnerthemethubeamer}
+%<thuouterstyle>\ProvidesPackage{beamerouterthemethubeamer}
+%<thubeamer|thucolorstyle|thuinnerstyle|thuouterstyle>[2021/07/07 v1.0.0 A Beamer Theme for Tsinghua University (THU)]
+%
+%<*driver>
+\ProvidesFile{thubeamer.dtx}[2021/07/07 v1.0.0 A Beamer Theme for Tsinghua University (THU)]
+\documentclass{ltxdoc}
+\usepackage{dtx-style}
+
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+
+\begin{document}
+  \DocInput{\jobname.dtx}
+\end{document}
+%</driver>
+%
+% \fi
+%
+% \CheckSum{0}
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
+% \GetFileInfo{\jobname.dtx}
+%
+% \changes{v1.0.0}{2021/07/07}{Initially design thubeamer}
+%
+% \DoNotIndex{\begin,\end,\begingroup,\endgroup}
+% \DoNotIndex{\ifx,\ifdim,\ifnum,\ifcase,\else,\or,\fi,\-}
+% \DoNotIndex{\let,\def,\xdef,\newcommand,\renewcommand}
+% \DoNotIndex{\expandafter,\csname,\endcsname,\relax,\protect}
+% \DoNotIndex{\Huge,\huge,\LARGE,\Large,\large,\normalsize}
+% \DoNotIndex{\small,\footnotesize,\scriptsize,\tiny}
+% \DoNotIndex{\normalfont,\bfseries,\slshape,\interlinepenalty}
+% \DoNotIndex{\hfil,\par,\hskip,\vskip,\vspace,\quad}
+% \DoNotIndex{\centering,\raggedright}
+% \DoNotIndex{\c@secnumdepth,\@startsection,\@setfontsize}
+% \DoNotIndex{\ ,\@plus,\@minus,\p@,\z@,\@m,\@M,\@ne,\m@ne}
+% \DoNotIndex{\@@par,\DeclareOperation,\RequirePackage,\LoadClass}
+% \DoNotIndex{\AtBeginDocument,\AtEndDocument}
+%
+% \IndexPrologue{\section*{索~~~~引}}
+% \GlossaryPrologue{\section*{修改记录}}
+%
+% \definecolor{beamer@headercolor}{RGB}{129,48,140}
+% \title{\bfseries\color{beamer@headercolor}\thubeamer：清华大学风格\\ Beamer主题}
+% \author{{\Large\fangsong 杨敬轩}\\[5pt]\texttt{yanglatex2e@gmail.com}\\[5pt]\texttt{yangjx20@mails.tsinghua.edu.cn}}
+% \date{\fileversion\ (\filedate)}
+%
+% \maketitle\thispagestyle{empty}
+%
+% \vskip 0.5cm
+%
+% \def\abstractname{\Large 摘\quad 要}
+% \begin{abstract}\normalsize\vskip0.5cm
+% \thubeamer~主题为作者在准备课程展示时设计制作，
+% 旨在帮助清华大学师生进行学术交流或其他需要演示文稿活动时，方便的使用 \LaTeX{} 制作含有学校特色的演示文稿。
+% \end{abstract}
+%
+% \vspace*{2em}
+% \def\abstractname{\Large 免责声明}
+% \begin{abstract}
+% \noindent\normalsize
+%  \begin{enumerate}
+% \item 本模板的发布遵守 \href{http://www.latex-project.org/lppl.txt}{\LaTeX\ Project Public License 1.3c} 以及其后的最新版本，使用前请认真阅读协议内
+%   容。
+%  \item 本主题为作者个人制作，使用仅供参考，任何由于使用本主题而引起的任何问题均与本主题作者无关。
+%  \item 任何个人或组织以本模板为基础进行修改、扩展而生成的新的专用模板，请严格遵
+%   守 \href{http://www.latex-project.org/lppl.txt}{\LaTeX\ Project Public License 1.3c} 协议以及其后的最新版本。由于违犯协议而引起的任何纠纷争端均与
+%   本模板作者无关。
+%  \end{enumerate}
+% \end{abstract}
+%
+%
+% \clearpage
+% \pagestyle{fancy}
+% \begin{multicols}{2}[
+%   \setlength{\columnseprule}{.4pt}
+%   \setlength{\columnsep}{18pt}]
+%   \tableofcontents
+% \end{multicols}
+% \clearpage
+%
+% \section{模板介绍}
+% \thubeamer\ (\textbf{T}sing\textbf{H}ua \textbf{U}niversity \LaTeX{}
+% \textbf{Beamer} Template) 是为了帮助清华大学师生撰写演示文稿而编写的 \LaTeX{} Beamer 模板。
+%
+% 本文档将尽量完整的介绍模板的使用方法，如有不清楚之处可以参考示例文档或者根据
+% 第~\ref{sec:howtoask} 节说明提问，有兴趣者可以联系作者参与完善此手册，非常欢迎你清学子对本代码作出贡献。
+%
+% \section{安装}
+% \label{sec:installation}
+%
+% \thubeamer\ 已经上传 CTAN，已包含在 TeXLive 与 MiKTeX 发行版中。
+% 安装方法：打开命令行，输入以下命令即可
+% \begin{shell}
+% $ tlmgr install thubeamer
+% \end{shell}
+% 阅读本说明文档可以使用以下命令：
+% \begin{shell}
+% $ texdoc thubeamer
+% \end{shell}
+%
+% 如果要使用开发版，需自己下载，\thubeamer\ 相关链接：
+% \begin{itemize}
+% \item 主页：\href{https://github.com/YangLaTeX/thubeamer}{GitHub}
+% \item 下载：\href{http://www.ctan.org/pkg/thubeamer}{CTAN}
+% \end{itemize}
+%
+% \subsection{模板的组成}
+% 下表列出了 \thubeamer{} 的主要文件及其功能介绍：
+%
+% \begin{longtable}{l|p{8cm}}
+% \toprule
+% {\heiti 文件（夹）} & {\heiti 功能描述}\\\midrule
+% \endfirsthead
+% \midrule
+% {\heiti 文件（夹）} & {\heiti 功能描述}\\\midrule
+% \endhead
+% \endfoot
+% \endlastfoot
+% thubeamer.dtx & 主题宏包、说明文档以及主题驱动文件的混排文件\\
+% main.tex & 主题测试文档\\
+% figures/ & 主题相关矢量图存储文件夹\\
+% makedoc.bat & 生成主题与用户手册脚本\\
+% makebeamer.bat & 编译测试样例脚本\\
+% makeclean.bat & 清理编译过程中间文件脚本\\
+% makecleanall.bat & 清理编译过程中间文件与样式文件脚本\\
+% Makefile & Linux \& Mac OS脚本\\
+% \textbf{thubeamer.pdf} & 用户手册（本文档）\\
+% \bottomrule
+% \end{longtable}
+% \textbf{注：}使用前，请仔细阅读\textbf{thubeamer.pdf}，即本文档。
+%
+% \section{使用说明}
+% \label{sec:usage}
+% 本手册假定用户已经能处理一般的 \LaTeX\ 文档，并对 \BibTeX\ 有一定了解。如果
+% 从来没有接触过 \TeX\ 和 \LaTeX，建议先学习相关的基础知识。
+%
+% \subsection{关于提问}
+% \label{sec:howtoask}
+% 按照优先级推荐提问的位置如下：
+%
+% \begin{itemize}
+% \item Github Issues: \href{http://github.com/YangLaTeX/thubeamer/issues}{http://github.com/YangLaTeX/thubeamer/issues}
+% \item Email: \href{mailto:yanglatex2e@gmail.com}{yanglatex2e@gmail.com}, \href{mailto:yangjx20@mails.tsinghua.edu.cn}{yangjx20@mails.tsinghua.edu.cn}
+% \end{itemize}
+%
+% \subsection{示例文件}
+% \label{sec:userguide}
+% 模板核心文件有四个\file{*.sty}，但是如果
+% 没有示例文档用户会发现很难下手。所以推荐新用户从模板自带的示例文档入手，里面包
+% 括了Beamer写作用到的所有命令及其使用方法，只需要用自己的内容进行相应替换就可以。
+% 对于不清楚的命令可以查阅本手册。下面的例子描述了模板中章节的组织形式，来自于示
+% 例文档，具体内容可以参考模板附带的 \file{main.tex}。
+%
+% \lstinputlisting[style=lstStyleLaTeX]{main.tex}
+%
+% \subsection{论文选项}
+% \label{sec:option}
+%
+% 论文选项在\file{main.tex} 文件的开头描述，此处不赘述。
+%
+% \section{使用模板}
+% \subsection{如何编译}\label{SubSec:HowToMake}
+% \subsubsection{Windows用户}
+% 主题项目里已经列出了脚本：
+% 首先双击\file{makedoc.bat} 脚本，生成主题和用户手册；
+% 然后双击\file{makebeamer.bat} 脚本生成测试 Beamer 文件预览；
+% 最后双击\file{makeclean.bat} 清理编译过程的中间文件；
+% 双击\file{makecleanall.bat}可以清除辅助文件以及样式文件。
+%
+% \subsubsection{Linux \& Mac OS用户}
+% 首先运行下面命令生成主题和用户手册；
+% \begin{shell}
+% $ make doc
+% \end{shell}
+%
+% 然后运行下面命令生成测试 Beamer 文件预览；
+% \begin{shell}
+% $ make beamer
+% \end{shell}
+%
+% 最后运行下面命令清理编译过程的中间文件。
+% \begin{shell}
+% $ make clean
+% \end{shell}
+%
+% 若运行下面命令则清理编译过程的中间文件以及所有样式文件。
+% \begin{shell}
+% $ make cleanall
+% \end{shell}
+%
+% \section{致谢}
+% \label{sec:thanks}
+% 感谢 \href{https://github.com/StickCui/XDUstyle-Beamer-Theme}{XDUstyle}、\href{https://github.com/tl3shi/THUBeamer}{thubeamer} 模板的作者，本模板基于他们改编而来！
+%
+% 欢迎各位到 \href{http://github.com/YangLaTeX/thubeamer/}{\thubeamer\ Github 主页}贡献！
+%
+% \StopEventually{\PrintChanges\PrintIndex}
+% \clearpage
+%
+% \section{实现细节}
+%
+% \subsection{主题主文件部分}
+% 导入必要宏包
+%    \begin{macrocode}
+%<*thubeamer>
+\def\thubeamer{\textsc{thu}\-\textsc{Beamer}}
+\RequirePackage{tikz}
+\usetikzlibrary{external}
+\RequirePackage{pgf}
+\RequirePackage{multicol}
+\RequirePackage{multimedia}
+\RequirePackage{calc}
+\RequirePackage{ctex}
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amssymb}
+\RequirePackage{bm}
+\RequirePackage{graphicx}
+\RequirePackage{tabularx}
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+\RequirePackage{enumerate}
+\RequirePackage{hyperref}
+\RequirePackage{algorithm}
+\RequirePackage{algorithmic}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{latexsym,xcolor,multicol,calligra}
+\RequirePackage{pstricks,listings,stackengine}
+\RequirePackage[sort&compress,numbers]{natbib}
+%    \end{macrocode}
+%
+% 主题选项
+%    \begin{macrocode}
+\DeclareOptionBeamer{thupurple}{
+  \PassOptionsToPackage{thupurple}{beamercolorthemethubeamer}
+  \PassOptionsToPackage{thupurple}{beamerinnerthemethubeamer}
+  \PassOptionsToPackage{thupurple}{beamerouterthemethubeamer}
+}
+\DeclareOptionBeamer{thupurple2}{
+  \PassOptionsToPackage{thupurple2}{beamercolorthemethubeamer}
+  \PassOptionsToPackage{thupurple2}{beamerinnerthemethubeamer}
+  \PassOptionsToPackage{thupurple2}{beamerouterthemethubeamer}
+}
+\DeclareOptionBeamer{smoothbars}{
+  \PassOptionsToPackage{smoothbars}{beamercolorthemethubeamer}
+  \PassOptionsToPackage{smoothbars}{beamerouterthemethubeamer}
+}
+\DeclareOptionBeamer{sidebar}{
+  \PassOptionsToPackage{sidebar}{beamercolorthemethubeamer}
+  \PassOptionsToPackage{sidebar}{beamerouterthemethubeamer}
+}
+\DeclareOptionBeamer{sectiontoc}{
+  \PassOptionsToPackage{sectiontoc}{beamerinnerthemethubeamer}
+}
+\DeclareOptionBeamer{subsectiontoc}{
+  \PassOptionsToPackage{subsectiontoc}{beamerinnerthemethubeamer}
+}
+\ProcessOptionsBeamer
+%    \end{macrocode}
+%
+% 特殊设置
+%    \begin{macrocode}
+\mode<presentation>
+{
+  \useinnertheme{thubeamer}
+  \useoutertheme{thubeamer}
+  \usecolortheme{thubeamer}
+}
+
+\mode<all>
+%</thubeamer>
+%    \end{macrocode}
+% \subsection{主题配色文件部分}
+%
+% 参数设置
+%    \begin{macrocode}
+%<*thucolorstyle>
+\DeclareOptionBeamer{thupurple}{\def\beamer@thucolor{thupurple}}
+\DeclareOptionBeamer{thupurple2}{\def\beamer@thucolor{thupurple2}}
+\DeclareOptionBeamer{smoothbars}{\def\beamer@thubar{smoothbars}}
+\DeclareOptionBeamer{sidebar}{\def\beamer@thubar{sidebar}}
+\ProcessOptionsBeamer
+
+\def\beamer@thucolorpurple{thupurple}
+\def\beamer@thusidebar{sidebar}
+%    \end{macrocode}
+%
+% 颜色设置。
+%    \begin{macrocode}
+\mode<presentation>
+
+\ifx\beamer@thucolor\beamer@thucolorpurple
+  \definecolor{beamer@textcolor}{RGB}{119,33,151}
+  \definecolor{beamer@headercolor}{RGB}{129,48,140} % purple
+  \ifx\beamer@thubar\beamer@thusidebar
+    \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+  \else
+    \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+  \fi
+\else
+  \definecolor{beamer@textcolor}{RGB}{119,33,151}
+  \definecolor{beamer@headercolor}{RGB}{129,48,140}
+  \ifx\beamer@thubar\beamer@thusidebar
+    \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+  \else
+    \definecolor{beamer@sidebarcolor}{RGB}{129,48,140}
+  \fi
+\fi
+
+% \setbeamercolor{footline}{bg=beamer@headercolor}
+\setbeamercolor{title}{fg=white,bg=beamer@headercolor}
+\ifx\beamer@thubar\beamer@thusidebar
+  \setbeamercolor{frametitle}{fg=beamer@headercolor,bg=beamer@headercolor!10}
+\else
+  \setbeamercolor{frametitle}{fg=white,bg=beamer@headercolor}
+\fi
+\setbeamerfont{frametitle}{size=\large}
+
+\setbeamercolor{secondbottomline}{fg=white,bg=beamer@headercolor!50!black}
+\setbeamercolor{firstbottomline}{fg=white,bg=beamer@headercolor}
+
+\setbeamercolor{palette primary}{use=structure,fg=white,bg=structure.fg}
+\setbeamercolor{palette secondary}{use=structure,fg=white,bg=structure.fg!75!black}
+\setbeamercolor{palette tertiary}{use=structure,fg=white,bg=structure.fg!50!black}
+\setbeamercolor{palette quaternary}{fg=white,bg=structure.fg!50!black}
+
+\setbeamercolor{block title}{fg=white,bg=beamer@headercolor}
+\setbeamercolor{block body}{bg=beamer@headercolor!10}
+\setbeamercolor{block title example}{%
+  use={normal text,example text},fg=white,bg=example text.fg!75!green
+}
+\setbeamercolor{fine separation line}{}
+\setbeamercolor{item projected}{fg=white}
+
+\setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
+\setbeamercolor{palette sidebar secondary}{use=structure,fg=structure.fg}
+\setbeamercolor{palette sidebar tertiary}{use=normal text,fg=normal text.fg}
+\setbeamercolor{palette sidebar quaternary}{use=structure,fg=structure.fg}
+
+\setbeamercolor{section in sidebar}{fg=beamer@textcolor}
+\setbeamercolor{section in sidebar shaded}{fg=gray}
+\setbeamercolor{separation line}{}
+\ifx\beamer@thubar\beamer@thusidebar
+  \setbeamercolor{sidebar}{bg=beamer@sidebarcolor!10}
+\else
+  \setbeamercolor{sidebar}{bg=beamer@sidebarcolor}
+\fi
+\setbeamercolor{sidebar}{parent=palette primary}
+\setbeamercolor{structure}{fg=beamer@headercolor}
+\setbeamercolor{subsection in sidebar}{fg=beamer@textcolor}
+\setbeamercolor{subsection in sidebar shaded}{fg=gray}
+\setbeamercolor{logo}{bg=beamer@headercolor!20}
+
+\mode<all>
+%</thucolorstyle>
+%    \end{macrocode}
+%
+% \subsection{内部主题文件部分}
+%
+% 必要宏包
+%    \begin{macrocode}
+%<*thuinnerstyle>
+\RequirePackage{tikz}
+\usetikzlibrary{external}
+%    \end{macrocode}
+%
+% 参数设置
+%    \begin{macrocode}
+\DeclareOptionBeamer{sectiontoc}{\def\beamer@thusectoc{sectiontoc}}
+\DeclareOptionBeamer{subsectiontoc}{\def\beamer@thusubsectoc{subsectiontoc}}
+\ProcessOptionsBeamer
+
+\def\beamer@thusectiontoc{sectiontoc}
+\def\beamer@thusubsectiontoc{subsectiontoc}
+%    \end{macrocode}
+%
+% 特殊设置
+%    \begin{macrocode}
+\mode<presentation>
+
+\useinnertheme{circles}
+% \usefonttheme{structurebold}
+\setbeamertemplate{caption}[numbered]{}
+\useinnertheme[shadow]{rounded}
+
+\newcommand\varparallel{%
+  \mathrel{%
+    \text{%
+      \tikz[baseline] \draw (0em,-0.3ex) -- (.4em,1.7ex) (.2em,-0.3ex) -- (.6em,1.7ex);
+    }%
+  }%
+}
+
+\ifx\beamer@thusectoc\beamer@thusectiontoc
+  \AtBeginSection[]{
+    \begin{frame}
+      \begin{multicols}{2}
+        \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+      \end{multicols}
+    \end{frame}
+  }
+\fi
+
+\ifx\beamer@thusubsectoc\beamer@thusubsectiontoc
+  \AtBeginSubsection[]{
+    \begin{frame}
+      \begin{multicols}{2}
+        \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+      \end{multicols}
+    \end{frame}
+  }
+\fi
+
+\mode<all>
+%</thuinnerstyle>
+%    \end{macrocode}
+% \subsection{外部主题文件部分}
+%
+%    \begin{macrocode}
+%<*thuouterstyle>
+%    \end{macrocode}
+%
+% 参数设置
+%    \begin{macrocode}
+\DeclareOptionBeamer{smoothbars}{\def\beamer@thubar{smoothbars}}
+\DeclareOptionBeamer{sidebar}{\def\beamer@thubar{sidebar}}
+\ProcessOptionsBeamer
+\def\beamer@thusidebar{sidebar}
+
+\mode<presentation>
+
+% 取消导航符号
+\setbeamertemplate{navigation symbols}{}
+
+\ifx\beamer@thubar\beamer@thusidebar
+  \useoutertheme[width=0.17\linewidth]{sidebar}
+  \logo{\includegraphics[width=0.08\linewidth]{thulogo.pdf}}
+\else
+  \useoutertheme[footline=authorinstitutetitle,subsection=false]{smoothbars}
+\fi
+
+% set footline
+\makeatletter
+\newcommand{\frameofframes}{/}
+\newcommand{\setframeofframes}[1]{
+  \renewcommand{\frameofframes}{#1}
+}
+\setbeamertemplate{footline}{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+    leftskip=.3cm,rightskip=.3cm plus1fil]{firstbottomline}%
+    \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+    \hfill%
+    {\usebeamerfont{institute in head/foot}%
+    \usebeamercolor[fg]{frame number}%
+      \insertshortinstitute
+    }%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+    leftskip=.3cm,rightskip=.3cm plus1fil]{secondbottomline}%
+    {\usebeamerfont{title in head/foot}\insertshorttitle}%
+    \hfill%
+    {\usebeamerfont{frame number}\usebeamercolor[fg]{frame number}\insertframenumber~\frameofframes~\inserttotalframenumber}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+  \end{beamercolorbox}
+}
+\makeatother
+
+\mode<all>
+%</thuouterstyle>
+%    \end{macrocode}
+%
+% \iffalse
+%    \begin{macrocode}
+%<*dtx-style>
+\ProvidesPackage{dtx-style}
+\RequirePackage{hypdoc}
+\RequirePackage[UTF8,scheme=chinese,fontset=windowsnew]{ctex}
+\RequirePackage{newpxtext}
+\RequirePackage{newpxmath}
+\RequirePackage[top=2.5cm, bottom=2.5cm, left=3cm, right=2cm, headsep=8mm]{geometry}
+\RequirePackage{array,longtable,booktabs}
+\RequirePackage{listings}
+\RequirePackage{fancyhdr}
+\RequirePackage{xcolor}
+\RequirePackage{enumitem}
+\RequirePackage{etoolbox}
+\RequirePackage{metalogo}
+\RequirePackage{hyperref}
+
+\colorlet{thu@macro}{purple!60!black}
+\colorlet{thu@env}{purple!70!black}
+\colorlet{thu@option}{purple}
+\patchcmd{\PrintMacroName}{\MacroFont}{\MacroFont\bfseries\color{thu@macro}}{}{}
+\patchcmd{\PrintDescribeMacro}{\MacroFont}{\MacroFont\bfseries\color{thu@macro}}{}{}
+\patchcmd{\PrintDescribeEnv}{\MacroFont}{\MacroFont\bfseries\color{thu@env}}{}{}
+\patchcmd{\PrintEnvName}{\MacroFont}{\MacroFont\bfseries\color{thu@env}}{}{}
+
+\def\DescribeOption{%
+  \leavevmode\@bsphack\begingroup\MakePrivateLetters%
+  \Describe@Option}
+\def\Describe@Option#1{\endgroup
+  \marginpar{\raggedleft\PrintDescribeOption{#1}}%
+  \thu@special@index{option}{#1}\@esphack\ignorespaces}
+\def\PrintDescribeOption#1{\strut \MacroFont\bfseries\sffamily\color{thu@option} #1\ }
+\def\thu@special@index#1#2{\@bsphack
+  \begingroup
+    \HD@target
+    \let\HDorg@encapchar\encapchar
+    \edef\encapchar usage{%
+      \HDorg@encapchar hdclindex{\the\c@HD@hypercount}{usage}%
+    }%
+    \index{#2\actualchar{\string\ttfamily\space#2}
+           (#1)\encapchar usage}%
+    \index{#1:\levelchar#2\actualchar
+           {\string\ttfamily\space#2}\encapchar usage}%
+  \endgroup
+  \@esphack}
+
+\lstdefinestyle{lstStyleBase}{%
+   basicstyle=\small\ttfamily,
+   aboveskip=\medskipamount,
+   belowskip=\medskipamount,
+   lineskip=0pt,
+   boxpos=c,
+   showlines=false,
+   extendedchars=true,
+   upquote=true,
+   tabsize=2,
+   showtabs=false,
+   showspaces=false,
+   showstringspaces=false,
+   numbers=none,
+   linewidth=\linewidth,
+   xleftmargin=4pt,
+   xrightmargin=0pt,
+   resetmargins=false,
+   breaklines=true,
+   breakatwhitespace=false,
+   breakindent=0pt,
+   breakautoindent=true,
+   columns=flexible,
+   keepspaces=true,
+   gobble=2,
+   framesep=3pt,
+   rulesep=1pt,
+   framerule=1pt,
+   backgroundcolor=\color{gray!5},
+   stringstyle=\color{purple!40!black!100},
+   keywordstyle=\bfseries\color{purple!50!black},
+   commentstyle=\slshape\color{black!60}}
+
+\lstdefinestyle{lstStyleShell}{%
+   style=lstStyleBase,
+   frame=l,
+   rulecolor=\color{purple},
+   language=bash}
+
+\definecolor{beamer@headercolor}{RGB}{21,95,130}
+\lstdefinestyle{lstStyleLaTeX}{%
+   style=lstStyleBase,
+   frame=l,
+   rulecolor=\color{beamer@headercolor},
+   language=[LaTeX]TeX}
+
+\lstnewenvironment{latex}{\lstset{style=lstStyleLaTeX}}{}
+\lstnewenvironment{shell}{\lstset{style=lstStyleShell}}{}
+
+\setlist{nosep}
+
+\DeclareDocumentCommand{\option}{m}{\textsf{#1}}
+\DeclareDocumentCommand{\env}{m}{\texttt{#1}}
+\DeclareDocumentCommand{\pkg}{s m}{%
+  \texttt{#2}\IfBooleanF#1{\thu@special@index{package}{#2}}}
+\DeclareDocumentCommand{\file}{s m}{%
+  \texttt{#2}\IfBooleanF#1{\thu@special@index{file}{#2}}}
+\newcommand{\myentry}[1]{%
+  \marginpar{\small\raggedleft\color{purple}\bfseries\strut #1}}
+\newcommand{\note}[2][Note]{{%
+  \color{magenta}{\bfseries #1}\emph{#2}}}
+\def\thubeamer{\textsc{Thu}\-\textsc{Beamer}}
+\def\thu{清华大学}
+%</dtx-style>
+%    \end{macrocode}
+% \fi
+%
+% \Finale
+%
+\endinput
+% \iffalse
+%  Local Variables:
+%  mode: doctex
+%  TeX-master: t
+%  End:
+% \fi
