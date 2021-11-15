@@ -5,6 +5,11 @@
 
 # thubeamer：清华大学 Beamer 模板
 
+![CTAN Version](https://img.shields.io/ctan/v/thubeamer.svg)
+![GitHub Version](https://img.shields.io/github/release/YangLaTeX/thubeamer.svg)
+![Repo Size](https://img.shields.io/github/repo-size/YangLaTeX/thubeamer.svg)
+![License](https://img.shields.io/ctan/l/thubeamer.svg)
+
 [GitHub](https://github.com/YangLaTeX/thubeamer) | [Download](https://github.com/YangLaTeX/thubeamer/releases) | [Wiki](https://github.com/YangLaTeX/thubeamer/wiki) | [CTAN](https://www.ctan.org/pkg/thubeamer)
 
 # Introduction to thubeamer
