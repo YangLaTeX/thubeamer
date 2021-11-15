@@ -108,10 +108,10 @@ This package consists of the file  thubeamer.dtx,
 %<thucolorstyle>\ProvidesPackage{beamercolorthemethubeamer}
 %<thuinnerstyle>\ProvidesPackage{beamerinnerthemethubeamer}
 %<thuouterstyle>\ProvidesPackage{beamerouterthemethubeamer}
-%<thubeamer|thucolorstyle|thuinnerstyle|thuouterstyle>[2021/07/07 v1.0.0 A Beamer Theme for Tsinghua University (THU)]
+%<thubeamer|thucolorstyle|thuinnerstyle|thuouterstyle>[2021/11/15 v1.1.0 A Beamer Theme for Tsinghua University (THU)]
 %
 %<*driver>
-\ProvidesFile{thubeamer.dtx}[2021/07/07 v1.0.0 A Beamer Theme for Tsinghua University (THU)]
+\ProvidesFile{thubeamer.dtx}[2021/11/15 v1.1.0 A Beamer Theme for Tsinghua University (THU)]
 \documentclass{ltxdoc}
 \usepackage{dtx-style}
 
@@ -335,7 +335,6 @@ This package consists of the file  thubeamer.dtx,
 \RequirePackage{multicol}
 \RequirePackage{multimedia}
 \RequirePackage{calc}
-\RequirePackage{ctex}
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
 \RequirePackage{amssymb}
@@ -379,6 +378,9 @@ This package consists of the file  thubeamer.dtx,
 }
 \DeclareOptionBeamer{subsectiontoc}{
   \PassOptionsToPackage{subsectiontoc}{beamerinnerthemethubeamer}
+}
+\DeclareOptionBeamer{en}{
+  \PassOptionsToPackage{en}{beamerinnerthemethubeamer}
 }
 \ProcessOptionsBeamer
 %    \end{macrocode}
@@ -490,11 +492,14 @@ This package consists of the file  thubeamer.dtx,
 %    \end{macrocode}
 %
 % 参数设置
+% \changes{v1.1.0}{2021/11/15}{add option `en' for preparing beamer in English}
 %    \begin{macrocode}
+\DeclareOptionBeamer{en}{\def\beamer@thulang{english}}
 \DeclareOptionBeamer{sectiontoc}{\def\beamer@thusectoc{sectiontoc}}
 \DeclareOptionBeamer{subsectiontoc}{\def\beamer@thusubsectoc{subsectiontoc}}
 \ProcessOptionsBeamer
 
+\def\beamer@thulanguage{english}
 \def\beamer@thusectiontoc{sectiontoc}
 \def\beamer@thusubsectiontoc{subsectiontoc}
 %    \end{macrocode}
@@ -502,6 +507,12 @@ This package consists of the file  thubeamer.dtx,
 % 特殊设置
 %    \begin{macrocode}
 \mode<presentation>
+
+\ifx\beamer@thulang\beamer@thulanguage
+  \relax
+\else
+  \RequirePackage{ctex}
+\fi
 
 \useinnertheme{circles}
 % \usefonttheme{structurebold}
