@@ -4,6 +4,12 @@ beamer:
 	pdflatex -synctex=1 -interaction=nonstopmode main
 	pdflatex -synctex=1 -interaction=nonstopmode main
 
+beamer-en:
+	pdflatex -synctex=1 -interaction=nonstopmode main-en
+	bibtex main-en
+	pdflatex -synctex=1 -interaction=nonstopmode main-en
+	pdflatex -synctex=1 -interaction=nonstopmode main-en
+
 doc:
 	xelatex thubeamer.dtx
 	makeindex -s gind.ist -o thubeamer.ind thubeamer.idx
