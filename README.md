@@ -20,6 +20,8 @@
   |- figures
     |- thulogo.pdf
   |- macros.tex
+  |- main-en.tex
+  |- main-en.pdf
   |- main.tex
   |- main.pdf
   |- makebeamer-en.bat
