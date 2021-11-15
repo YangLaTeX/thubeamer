@@ -1,0 +1,222 @@
+%%=======================================================================
+% !Mode:: "TeX:UTF-8"
+% !TEX program  = PdfLaTeX
+%%=======================================================================
+% 模板名称：thubeamer
+% 模板版本：V1.1.0
+% 模板作者：杨敬轩（Jingxuan Yang）
+% 联系作者：yangjx20@mails.tsinghua.edu.cn & yanglatex2e@gmail.com
+% 模板适用：清华大学风格 Beamer 模板
+% 模板编译：手动编译方法参看 README.md 或 thubeamer.pdf
+%          编译 beamer 之前必须编译说明文档：make doc 或双击 makedoc.bat
+%          编译说明文档同时分离出四个样式文件 *thubeamer.sty
+%          GNU make 工具：make beamer
+%          Windows 批处理脚本：双击 makebeamer.bat 自动编译 beamer
+%          更多编译细节详见说明文档：thubeamer.pdf
+% 更新时间：2021/11/15
+% 模板帮助：请**务必务必务必**阅读 thubeamer.pdf 说明文档，文档查看方法：
+%          下载模板文件夹里就有，如果是从 CTAN 上安装更新本模板，则通过
+%          cmd 命令行：texdoc thubeamer 查看文档
+%          推荐前往模板的 GitHub 仓库获取最新文件，地址：
+%          https://github.com/YangLaTeX/thubeamer
+%%=======================================================================
+
+% 设置文档类别为 <beamer>
+% \documentclass[aspectratio=169]{beamer} % 设置长宽比为 16:9
+\documentclass{beamer}
+
+% 使用 <thubeamer> 主题
+\usetheme[en]{thubeamer}
+
+% 模板选项如下
+% (a.1) smoothbars: 页面顶端单行显示目录，默认选项
+% (a.2) sidebar: 页面左侧分栏显示目录
+% \usetheme[sidebar]{thubeamer}
+
+% (b) sectiontoc: 在每节（section）前显示目录，并高亮显示当前节，默认不显示
+
+% (c) subsectiontoc: 在每小节（subsection）前显示目录，并高亮显示当前节和当前小节，默认不显示
+
+% (d) en: 仅使用英文来制作 beamer，应用此选项后，汉字将全部无法编译
+
+% 图片存放路径
+\graphicspath{{figures/}}
+
+\include{macros}
+
+% 封面信息，方括号内容是显示在左侧边栏的内容（当选择 sidebar 主题时有效）
+\title[Title]{Title\\[2mm] Presentation}
+\author[Jingxuan Yang]{Student: Jingxuan Yang\\[5mm] Supervisor: Prof. XX}
+\institute[Tsinghua University]{\small Tsinghua University}
+\date{\small \vskip -10pt \today}
+
+% 开始写文章
+\begin{document}
+
+% 标题页
+\begin{frame}
+	\maketitle
+\end{frame}
+
+% 目录页
+\section*{Contents}
+\frame{
+  \frametitle{\secname}
+  \tableofcontents[hideallsubsections]
+}
+
+\section{Research Contents}
+
+\subsection{Research Contents of This Project}
+
+\begin{frame}{Research Contents of This Project}
+  \begin{figure}
+    \includegraphics[width=0.4\linewidth]{thulogo}
+    \caption{Research Contents of This Project}
+  \end{figure}
+\end{frame}
+
+\subsection{Research progress}
+
+\begin{frame}{Research progress}
+  \begin{figure}
+    \includegraphics[width=0.4\linewidth]{thulogo}
+    \caption{Research progress}
+  \end{figure}
+\end{frame}
+
+\section{Results}
+
+\begin{frame}{Results}
+  \begin{block}{Results}
+    \begin{itemize}
+      \setlength{\itemsep}{6pt}
+      \item XXXX
+      \item XXXX
+      \item XXXX
+      \item XXXX
+      \item XXXX
+      \item XXXX
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\subsection{Case 1}
+
+\begin{frame}{Case 1}
+  \begin{block}{Unnumbered equation}
+    Example of unnumbered equation:
+    $$
+      k:[-\pi,\pi] \rightarrow [0,1]
+    $$
+  \end{block}
+\end{frame}
+
+\subsection{Case 2}
+
+\begin{frame}{Case 2}
+  \begin{block}{numbered equation}
+    \begin{itemize}
+      \item Example of numbered equation: the input is an image
+      \begin{equation}
+        \vx\in\reals^{C_{\text{in}}\times H\times W}
+      \end{equation}
+      where $C_{\text{in}}$ represents number of input channels, $H$ is the height of image, and $W$ is the width of image.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\subsection{Case 3}
+
+\begin{frame}{Case 3}
+  \begin{block}{Table}
+    Example of tables, shown in \ref{tab:unique_values}. 
+
+    \begin{table}[htbp]
+      \small
+      \centering
+      \caption{Unique elements in train.csv }
+      \label{tab:unique_values}
+      \begin{tabular}{lc}
+        \toprule
+        column & \# unique values \\
+        \midrule
+        posting\_id & 34250 \\
+        image & 32412 \\
+        image\_phash & 28735 \\
+        title & 33117 \\
+        label\_group & 11014 \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
+  \end{block}
+\end{frame}
+
+\subsection{Case 4}
+
+\begin{frame}{Case 4}
+  \begin{block}{Parallel figures}
+    Example of parallel figures.
+  \end{block}
+  \begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+      \centering
+      \includegraphics[width=3cm]{thulogo.pdf}
+      \caption{Example figure 1}
+      \label{fig:left_side}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+      \centering
+      \includegraphics[width=3cm]{thulogo.pdf}
+      \caption{Example figure 2}
+      \label{fig:right_side}
+    \end{minipage}
+  \end{figure}
+\end{frame}
+
+\section{Future Work}
+
+\subsection{Future Work}
+
+\begin{frame}{Future work}
+  \begin{block}{Future work}
+    \begin{itemize}
+      \setlength{\itemsep}{6pt}
+      \item XXXX
+      \item XXXX
+      \item XXXX
+      \item XXXX
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\subsection{Scheduling}
+
+\begin{frame}{Scheduling}
+  \begin{block}{Scheduling}
+    \begin{itemize}
+      \setlength{\itemsep}{6pt}
+      \item XXXX\cite{webster2010}
+      \item XXXX\cite{jones2006}
+      \item XXXX\cite{mcmahan2005}
+      \item XXXX\cite{Gravagne2003}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Bibliography}
+  \bibliographystyle{thubeamer}
+  \bibliography{reference}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+    {\Huge\calligra Thanks for your attention!}
+    \vspace{1cm}
+
+    {\Huge Q \& A}
+  \end{center}
+\end{frame}
+
+\end{document}
