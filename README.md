@@ -9,7 +9,7 @@
 
 # Introduction to thubeamer
 
-**thubeamer** is a **beamer theme** designed for Tsinghua University (THU). Current version is 1.0.0, updated on 2021/07/07.
+**thubeamer** is a **beamer theme** designed for Tsinghua University (THU). Current version is 1.1.0, updated on 2021/11/15.
 
 ```latex
   |- figures
@@ -17,6 +17,7 @@
   |- macros.tex
   |- main.tex
   |- main.pdf
+  |- makebeamer-en.bat
   |- makebeamer.bat
   |- makeclean.bat
   |- makecleanall.bat
@@ -31,7 +32,7 @@
 
 # thubeamer 简介
 
-thubeamer 是清华大学风格 Beamer 模板，当前版本1.0.0，更新于2021年07月07日。
+thubeamer 是清华大学风格 Beamer 模板，当前版本1.1.0，更新于2021年11月15日。
 
 # Documentation
 
@@ -82,6 +83,7 @@ To use Makefile, you should have GNU `make` tool installed.
 ```bash
 make doc       # compile documentation (required before compiling the beamer)
 make beamer    # compile beamer
+make beamer-en # compile beamer prepared in English
 make clean     # clean auxiliary files
 make cleanall  # clean auxiliary files and style files
 ```
@@ -93,6 +95,7 @@ make cleanall  # clean auxiliary files and style files
 ```bash
 make doc       # 编译说明文档（在编译 beamer之前必须编译说明文档）
 make beamer    # 编译 beamer
+make beamer-en # 编译英文 beamer
 make clean     # 清除辅助文件
 make cleanall  # 清除辅助文件与样式文件
 ```
@@ -104,6 +107,7 @@ make cleanall  # 清除辅助文件与样式文件
 ```bash
 makedoc       # compile documentation (required before compiling the beamer)
 makebeamer    # compile beamer
+makebeamer-en # compile beamer prepared in English
 makeclean     # clean auxiliary files
 makecleanall  # clean auxiliary files and style files
 ```
@@ -115,6 +119,7 @@ makecleanall  # clean auxiliary files and style files
 ```bash
 makedoc       # 编译说明文档（在编译 beamer之前必须编译说明文档）
 makebeamer    # 编译 beamer
+makebeamer-en # 编译英文 beamer
 makeclean     # 清除辅助文件
 makecleanall  # 清除辅助文件与样式文件
 ```
