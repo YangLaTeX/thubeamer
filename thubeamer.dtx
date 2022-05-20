@@ -2,7 +2,7 @@
 % !TeX program  = XeLaTeX
 % !TeX encoding = UTF-8
 %
-% Copyright (C) 2019--2021 by Jingxuan Yang <yanglatex2e@gmail.com>
+% Copyright (C) 2019--2022 by Jingxuan Yang <yanglatex2e@gmail.com>
 %
 % This file may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3c
@@ -108,10 +108,10 @@ This package consists of the file  thubeamer.dtx,
 %<thucolorstyle>\ProvidesPackage{beamercolorthemethubeamer}
 %<thuinnerstyle>\ProvidesPackage{beamerinnerthemethubeamer}
 %<thuouterstyle>\ProvidesPackage{beamerouterthemethubeamer}
-%<thubeamer|thucolorstyle|thuinnerstyle|thuouterstyle>[2021/11/15 v1.1.0 A Beamer Theme for Tsinghua University (THU)]
+%<thubeamer|thucolorstyle|thuinnerstyle|thuouterstyle>[2022/05/20 v1.1.1 A Beamer Theme for Tsinghua University (THU)]
 %
 %<*driver>
-\ProvidesFile{thubeamer.dtx}[2021/11/15 v1.1.0 A Beamer Theme for Tsinghua University (THU)]
+\ProvidesFile{thubeamer.dtx}[2022/05/20 v1.1.1 A Beamer Theme for Tsinghua University (THU)]
 \documentclass{ltxdoc}
 \usepackage{dtx-style}
 
@@ -232,7 +232,9 @@ This package consists of the file  thubeamer.dtx,
 % \subsection{模板的组成}
 % 下表列出了 \thubeamer{} 的主要文件及其功能介绍：
 %
-% \begin{longtable}{l|p{8cm}}
+% \changes{v1.1.1}{2022/05/20}{omit vertical rules}
+% 
+% \begin{longtable}{lp{8cm}}
 % \toprule
 % {\heiti 文件（夹）} & {\heiti 功能描述}\\\midrule
 % \endfirsthead
@@ -608,6 +610,7 @@ This package consists of the file  thubeamer.dtx,
 %</thuouterstyle>
 %    \end{macrocode}
 %
+% \changes{v1.1.1}{2022/05/20}{fix \pkg{newpxtext} bug}
 % \iffalse
 %    \begin{macrocode}
 %<*dtx-style>
@@ -615,7 +618,21 @@ This package consists of the file  thubeamer.dtx,
 \RequirePackage{hypdoc}
 \RequirePackage[UTF8,scheme=chinese,fontset=windowsnew]{ctex}
 % \RequirePackage{newpxtext}
-\usepackage[nofontspec]{newpxtext}
+\setmainfont{TeXGyrePagellaX}[
+  Extension   = .otf,
+  UprightFont = *-Regular,
+  BoldFont    = *-Bold,
+  ItalicFont  = *-Italic,
+  BoldItalicFont = *-BoldItalic,
+]
+\setsansfont{IBMPlexSansCondensed}[%
+  Extension      = .otf,
+  UprightFont    = *-Regular,
+  BoldFont       = *-Bold,
+  ItalicFont     = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]
+\setmonofont{CMU Typewriter Text}
 \RequirePackage{newpxmath}
 \RequirePackage[top=2.5cm, bottom=2.5cm, left=3cm, right=2cm, headsep=8mm]{geometry}
 \RequirePackage{array,longtable,booktabs}

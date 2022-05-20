@@ -14,7 +14,7 @@
 
 # Introduction to thubeamer
 
-**thubeamer** is a **beamer theme** designed for Tsinghua University (THU). Current version is 1.1.0, updated on 2021/11/15.
+**thubeamer** is a **beamer theme** designed for Tsinghua University (THU). Current version is 1.1.1, updated on 2022/05/20.
 
 ```latex
   |- figures
@@ -39,7 +39,7 @@
 
 # thubeamer 简介
 
-thubeamer 是清华大学风格 Beamer 模板，当前版本1.1.0，更新于2021年11月15日。
+thubeamer 是清华大学风格 Beamer 模板，当前版本1.1.1，更新于2022年05月20日。
 
 # Documentation
 
