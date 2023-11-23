@@ -1827,6 +1827,35 @@ FUNCTION {article} {                              % void Entry::article() {
                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                   %
+
+
+
+FUNCTION {misc}
+{ 
+  "OL" set.mark                                    %   set_mark("J");
+  start.bibitem                                   %   start_bibitem();
+  true output.title                               %   output_title(true);
+  cap.comma write$                            %   write(cap_full_stop);
+  true output.author                              %   output_author(true);
+  % true output.mark                                %   output_mark(true);
+  % true output.journal                             %   output_journal(true);
+  true output.url                                 %   output_url(true);
+  % output_year(true);
+  % false output.volume                             %   output_volume(false);
+  % false output.number                             %   output_number(false);
+  % false output.pages                              %   output_pages(false);
+  % false output.citedate                           %   output_citedate(false);
+  % false output.url.or.doi                         %   output_url_or_doi(false);
+  end.bibitem                                 %   end_bibitem();
+% bibitem.begin
+% format.authors write$ add.period
+% format.title "[OL]" * write$ add.period
+% format.year write$ add.comma
+% note write$
+% format.url
+% newline$
+}       
+
 FUNCTION {news} {                                 % void Entry::news() {
   "N" set.mark                                    %   set_mark("N");
   start.bibitem                                   %   start_bibitem();
